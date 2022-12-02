@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Skills Quizzes</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+<script defer src="https://pyscript.net/latest/pyscript.js"></script>
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* Style the header */
+.header {
+  padding: 40px;
+  text-align: center;
+  background-image: url("blackboard_symbols.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 120px;
+  background-size: 100% 100%;
+  color: #faf519;
+}
+
+.header h1 {
+  font-size: 60px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden; /* Hide overflow */
+  background-color: #34414f; /* Dark background color */
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left; /* Make sure that the links stay side-by-side */
+  display: block; /* Change the display to block */
+  color: white; /* White text color */
+  text-align: center; /* Center the text */
+  padding: 14px 20px; /* Add some padding */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right; /* Float a link to the right */
+}
+
+/* Change color on hover/mouse-over */
+.navbar a:hover {
+  background-color: #627c91; /* Grey background color */
+  color: black; /* Black text color */
+}
+
+
+</style>
+
+
+
+
+
+
+</head>
+<body>
+
+<div class="header">
+<h1>Skills Quizzes</h1>
+</div>
+
+<div class="navbar">
+  <a href="1_MathClassReviews.html">Class Reviews</a>
+  <a href="2_VideoTutorials.html">Tutorials</a>
+  <a href="3_SkillsQuizzes.html">Quizzes</a>
+  <a href="index.html" class="right">Home</a>
+
+</div>
+
+<br>
+
+<h2>Division</h2>
+
+<py-script>
+    import random
+
+    def division():
+        int3 = random.randint(0,144)
+        int4 = random.randint(1,12)
+        factor = int3 / int4
+        pyscript.write('fred3', str(int3))
+        pyscript.write('fred4', str(int4))
+        return factor
+
+    d13 = division()   
+  
+</py-script>
+  
+
+<p><label id='fred3'></label> / <label id='fred4'></label> = ?</p>
+
+<button onclick="addUp()">My answer is ...</button>
+
+<p id="AddItUp"> </p>
+
+<script>
+    function addUp() {
+        let MyAnswer = prompt("What is the sum of these numbers?");
+        Number(MyAnswer);
+      if (MyAnswer != null) {
+        document.getElementById("AddItUp").innerHTML = "You said " + MyAnswer + ".";
+      }
+    }
+    </script>
+
+<!-- 
+  
+<button onclick="compareIt()">Am I right?</button>
+
+<p id="CheckIt"></p>
+
+<script>
+    function compareIt() {
+      sums = {PyScript.globals.get('sums')};
+        if (MyAnswer != sums) {
+            document.getElementById("CheckIt").innerHTML = "This is incorrect. " + 
+            MyAnswer + " is not equal to " + sums + ".";
+        }
+    }
+</script>
+
+-->
+
+
+
+
+
+
+<p>To try another division problem, refresh the page.</p>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+Other skills quizzes:
+<div class="navbar">
+  <a href="4_SkillsQuizzes_addition.html">Addition</a>
+  <a href="4_SkillsQuizzes_subtraction.html">Subtraction</a>
+  <a href="4_SkillsQuizzes_multiply.html">Multiplication</a>
+
+</div>
+
+
+
+</body>
+</html>
